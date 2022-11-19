@@ -2,9 +2,9 @@ name: Docker
 
 on:
   push:
-    branches: [ "main" ]
+    # branches: [ "main" ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ "main" ]
 
@@ -30,8 +30,6 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=sha
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
