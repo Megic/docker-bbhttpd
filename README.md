@@ -12,10 +12,10 @@ This image's tag(version) will follow the version of Busybox.
 
 ## Usage
 
-The image is hosted on [Docker Hub](https://hub.docker.com/u/mengzyou/bbhttpd):  
+The image is hosted on [Docker Hub](https://hub.docker.com/u/megic/bbhttpd):  
 
 ```Dockerfile
-FROM mengzyou/bbhttpd:latest
+FROM megic/bbhttpd:latest
 
 # Copy your static files
 COPY --from=builder --chown=www:www /home/node/app/output /home/www/html
@@ -24,7 +24,7 @@ COPY --from=builder --chown=www:www /home/node/app/output /home/www/html
 Run the image:
 
 ```shell
-docker container run --rm -it -p 8000:80 mengzyou/bbhttpd:latest
+docker container run --rm -it -p 8000:80 megic/bbhttpd:latest
 ```
 
 Browser to `http://localhost:8000/` .  

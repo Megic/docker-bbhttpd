@@ -26,7 +26,7 @@ COPY --from=builder /etc/passwd /etc/passwd
 COPY --from=builder /etc/group /etc/group
 COPY --from=builder /busybox/_install/bin/busybox /bin/busybox
 
-USER www
+# USER www
 COPY httpd.conf /home/www/
 WORKDIR /home/www/html
 COPY index.html .
